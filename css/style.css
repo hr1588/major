@@ -1,0 +1,107 @@
+a{text-decoration: none;}
+ul,li{list-style: none;}
+*{margin: 0; padding:0;}
+
+body{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+header p{
+    color: darkblue;
+}
+
+nav{
+    position: relative;
+    z-index:0;
+    margin-top: 30px;
+}
+
+#section_1{
+    width: 100%;
+    margin: 30px 0 50px 0;
+}
+
+
+
+#section_2{
+    display: flex;
+    background-color: #f0f0f0;
+}
+
+#section_2 article{
+    flex: 3;
+}
+
+#section_2 article p, #section_3 p{
+    margin-top: 5px;
+}
+
+#section_2 aside{
+    flex: 1;
+}
+
+#section_2 p{
+    text-align: center;
+    margin-left: 20px;
+}
+
+#section_3{
+    margin: 50px 0;
+}        
+
+.top{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    transition-duration: 0.5s;
+}
+
+#section_2 img, #section_3 img{
+    border-radius: 10%;
+}
+
+img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+
+#top{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+#sub{
+    width: 100%;
+    overflow: hidden;
+    margin: 0; padding: 0;
+}
+
+#sub li{
+    width: 100%;
+    height: 0;
+    line-height: 60px;
+}
+
+
+#top:hover a{
+   color: whitesmoke;
+   background-color: indigo;
+}
+
+#top:hover #sub li{
+    height: 60px;
+    border-bottom: 1px solid black;
+    transition-duration: 0.5s;
+}

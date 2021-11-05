@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Document</title>
+   
+    <script>
+        function login(){
+            let id = document.getElementById("id").value;
+            let pw = document.getElementById("pw").value;
+            if(id==="admin"){
+                if(pw=="1234"){
+                   alert("로그인이 되었습니다");
+                }else{
+                    alert("비밀번호를 확인하세요")
+                }
+            }else{
+                alert("회원가입을 하세요")
+            }
+         
+        }
+
+        function search(){
+            let search = document.getElementById("search").value;
+            if(search=="은율"){
+                alert("자연에서 발견한 천연원료");
+            }else if(search==""){
+                alert("내용을 입력하세요");
+            }else{
+                alert("다시 입력하세요");
+            }
+        }
+
+        window.onscroll = function(){scroll()};
+
+        function scroll(){
+            if(document.body.scrollTop>100 || document.documentElement.scrollTop >100){
+                document.getElementById("btn").className = "top";
+            }else{
+                document.getElementById("btn").className="";
+            }
+        }
+    </script>
+
+</head>
+<body class="w3-content w3-margin-top">
+
+<header class="w3-red">
+    <p class="w3-xxlarge w3-center">Everyday Care</span>
+</header>
+
+<!-- header end-->
+
+<nav>
+    <navi>
+        <ul class = "w3-bar">
+            <li class="w3-bar-item w3-button" id="top">
+                <a href="#" class="w3-padding-large">Everyday Care</a>
+                <ul id="sub">
+                    <li>브랜드 역사</li>
+                    <li>대표 소개</li>
+                    
+                </ul>
+            </li>
+            <li class="w3-bar-item w3-button" id="top">
+                <a href="#" class="w3-padding-large">제품</a>
+                <ul id="sub">
+                    <li>특가 상품</li>
+                    <li>프리미엄 상품</li>
+                    <li>Best 상품</li>
+                </ul>
+            </li>
+            <li class="w3-bar-item w3-button" id="top">
+                <a href="#" class="w3-padding-large">커뮤니티</a>
+                <ul id="sub">
+                    <li>공지 사항</li>
+                    <li>FAQ</li>
+                    <li>1:1 문의</li>
+                </ul>
+            </li>
+            <li class="w3-bar-item w3-button" id="top">
+            <a href="#" class="w3-padding-large">홍보영상</a>
+            </li>
+        </ul>
+    </navi>
+</nav>
+
+<!-- nav end-->
+
+<section id = "section_1">
+    <img src="img/a.jpg" style="width: 100%;">
+</section>
+
+<!-- section 1 end-->
+
+<section id = "section_2" class = "w3-margin-top">
+    <article class = "hot_pd" class= "w3-left">
+        <p class="w3-xlarge" style="margin-left: 0; font-weight: 800;">이달의 인기상품</p>
+
+        <div class="w3-row">
+
+        <div class="w3-col s5" style="margin-right: 60px;">
+            <img class = "w3-margin" src="./img/b_1.jpg" width="100%"/>
+            <p class="w3-large"style="font-weight: 700;">쑥이 가미된 천연 트리트먼트</p>
+            <P>쑥 향기로 머리에 주는 보약</P>
+            
+        </div>
+        <div class="w3-col s5">
+            <img class = "w3-margin"/ src="./img/b_2.jpg" width="100%"/>
+            <p class="w3-large"style="font-weight: 700;">쑥이 가미된 천연 3종 샴푸</p>
+            <p>쑥 향기로 머리에 주는 보약</p>
+        </div>
+
+        </div>
+
+        <div class="w3-row" style="margin-top: 30px;">
+
+            <div class="w3-col s5" style="margin-right: 60px;">
+                <img class = "w3-margin" src="./img/b_3.jpg" width="100%"/>
+                <p class="w3-large"style="font-weight: 700;">은율 플라워 핸드크림 3종 세트</p>
+                <P>손끝에서 은은하게 피어나는 꽃향기</P>
+                
+            </div>
+            <div class="w3-col s5">
+                <img class = "w3-margin"/ src="./img/b_4.jpg" width="100%"/>
+                <p class="w3-large"style="font-weight: 700;">폴링 벨벳 립스틱</p>
+                <p>부드럽게 입술에 밀착</p>
+            </div>
+    
+            </div>
+
+       </article>
+
+    <aside class = "inform w3-right w3-margin w3-container">
+        <div id="login">
+            <p class="w3-xlarge" style="font-weight: 700; margin-right: 30px;">로그인</p><br>
+            ID : <br><br><input type="text" name="name" id = "id" class="w3-input"> <br>
+            비밀번호 : <br><br><input type="password" name="pass" id="pw" class="w3-input"> <br><br>
+            <button class = "w3-btn" onclick="login()">로그인</button> <button class = "w3-btn" onclick="cancel()">취소</button> 
+            <a href="https://join-on.amorepacific.com/member/step1.do?siteCd=APM&returnUrl=https://www.amoremall.com/kr/ko/main?&amp;utm_source=naver&amp;utm_medium=sa&amp;utm_campaign=ao_naver_powerlink&amp;utm_content=amoremall_brand&amp;utm_term=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_media=27758&amp;n_query=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_rank=1&amp;n_ad_group=grp-a001-01-000000022983008&amp;n_ad=nad-a001-01-000000149598090&amp;n_keyword_id=nkw-a001-01-000003934291895&amp;n_keyword=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_campaign_type=1&amp;n_ad_group_type=1&amp;NaPm=ct%3Dkvkx7fls%7Cci%3D0Aa0003mO8bvvMpw7uZn%7Ctr%3Dsa%7Chk%3D88e54e365da47c0d2bcb566b212bc1720f27d948&cid=712931025.1636028635&gid=1925810126.1636028635&pageTitle=%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85&menuId=&subMenuId=&breadCrumb=HOME+%3E+%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85" target="_blank"><button class = "w3-btn">회원가입</button></a>
+        </div>
+        
+        <div id = "ad" style="margin: 70px 0;">
+            <img src="img/as_1.jpg" width="100%" height="130px" style="margin-bottom: 20px;">
+            <p style="margin-right: 20px;">자연에서 발견한 천연 원료, <br><span style="font-weight:700; cursor: pointer;">은율</span>이란?</p>
+        </div>
+
+        <div id = "search_box" style="margin-bottom: 30px;">
+            <p class="w3-large" style="font-weight: 700; margin-right: 40px; margin-bottom: 20px;">궁금하시다면?</p>
+            <input type="search" id="search" placeholder="입력하세요"><br><br>
+            <button class="w3-btn" onclick="search()" style="margin-left: 75px;">검색</button>
+        </div>
+        
+    </aside>
+</section>
+
+<!-- section2 end-->
+
+<section id = "section_3">
+<p class="w3-center w3-xlarge" style="font-weight: 800;">신상품</p>
+<div class = w3-row>
+    <div class="w3-col s4">
+        <img src="img/c_1.jpg" width="100%">
+        <p class="w3-large w3-center"style="font-weight: 700;">매일 아침을 상쾌하게, 폼 클렌져</p>
+        <p class="w3-center">모공 속 노폐물까지 제거</p>
+    </div>
+    <div class="w3-col s4 ">
+        <img src="img/c_2.jpg" width="100%">
+        <p class="w3-large w3-center"style="font-weight: 700;">소중한 피부를 위한 바디 미스트</p>
+        <p class="w3-center">감성 터치 바디 미스트</p>
+    </div>
+    <div class="w3-col s4 ">
+        <img src="img/c_3.jpg" width="100%">
+        <p class="w3-large w3-center"style="font-weight: 700;">모공 케어! 청귤 토너</p>
+        <p class="w3-center">싱그러운 청귤 에너지로 피부 보호</p>
+    </div>
+</div>
+</section>
+
+<!-- section3 end-->
+
+<footer class = "w3-margin-top w3-dark-grey">
+    <div class="w3-row">
+        <div class="w3-col s4 w3-container">
+           <h4 style="font-weight: 700;">에브리데이 케어</h4>
+           <h3>대표자 : 이동현</h3>
+        <p>주소 : 부산광역시 서구 구덕로 225</p>
+       <p>출처 : 동아대학교 경영정보학과</p>
+        </div>
+        <div class="w3-col s4 w3-container">
+            <h4>고객센터</h4>
+            <h3>1588-1568</h3>
+            <p>평일 08:00-20:00
+            (주말 및 공휴일 휴무)</p>
+        </div>
+        <div class="w3-col s4 w3-container">
+        <h4>About cosmetics</h4>
+        <h3>상품 등록</h3>
+        <button class = "w3-button" onclick="Fun()">
+            <a href="#">여기를 눌러주세요</a></button>
+        </div>
+    </div>
+
+    <div class="w3-row" style="margin-top: 20px;">
+        <p class="w3-center">Copyright ⓒ Donghyun Lee All Right Reserved.</p>
+    </div>
+
+</footer>
+
+<!--footer end-->
+
+<div id = "btn">
+    <a href="#">TOP</a>
+</div>
+
+</body>
+</html>
