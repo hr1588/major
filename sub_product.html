@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품 등록</title>
     <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style.css">
     <script>
     
     let data = [["샴푸", "img/b_1.jpg", 5000],
@@ -40,11 +41,31 @@
             window.open("subpro_ev.html","상품 등록 안내","width = 550, height = 300, scrollbars=yes");
         }
 
+        window.onscroll = function(){scroll()};
+
+    function scroll(){
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop >100){
+        document.getElementById("btn").className = "top";
+    }else{
+        document.getElementById("btn").className="";
+    }
+}
+
     </script>
 
     <style>
+
+        a{text-decoration: none;
+        }
+
+        #back{
+            position: fixed;
+            top:25px;
+            right: 30px;
+        }
+
         #productList{
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
 
         img{
@@ -73,6 +94,9 @@
 
 <div id = "information">
     <h2>상품등록 페이지</h2>
+    <div id = "back">
+        <a href="index.html">메인으로</a>
+    </div>
 </div>
     
 <div id = "productList"></div>
@@ -85,6 +109,10 @@
     가격 : <input class="w3-input" type="text" name="" id="price"> <br>
     <button class= "w3-button w3-blue" onclick="fileUpload();"> 상품등록</button>
     <button class= "w3-button w3-blue" onclick="tablePrint();"> 상품리스트</button>
+</div>
+
+<div id = "btn">
+    <a href="#">TOP</a>
 </div>
 
 </body>
