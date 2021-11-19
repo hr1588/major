@@ -9,9 +9,9 @@
     <script>
     
     let data = [["샴푸", "img/b_1.jpg", 5000],
-                    ["트리트먼트", "img/b_1.jpg", 10000],
-                    ["바디워시", "img/b_1.jpg", 10000],
-                    ["립스틱", "img/b_1.jpg", 8000]]
+                    ["트리트먼트", "img/b_2.jpg", 10000],
+                    ["핸드크림", "img/b_3.jpg", 10000],
+                    ["립스틱", "img/b_4.jpg", 8000]]
 
      function tablePrint(){
         let text = '';
@@ -34,9 +34,11 @@
 
             data.push(a);
             console.log(data);
-        
         }        
 
+        function popup(){
+            window.open("subpro_ev.html","상품 등록 안내","width = 550, height = 300, scrollbars=yes");
+        }
 
     </script>
 
@@ -45,15 +47,39 @@
             margin-bottom: 100px;
         }
 
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        #information h2{
+            margin-left: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        th{
+            font-size: 25px;
+        }
+
+        tr{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
     </style>
 </head>
-<body onload="tablePrint();">
+<body onload="tablePrint();popup();">
+
+<div id = "information">
+    <h2>상품등록 페이지</h2>
+</div>
     
 <div id = "productList"></div>
-<hr>
 
-<div class="w3-container">
-    <h2>  상품 등록</h2>
+
+<div class="w3-container" style="margin-bottom: 30px;">
+    <h2 style="font-weight: 600"> 상품 등록</h2><hr>
     제품명 : <input class="w3-input" type="text" name="" id="name"> <br>
     제품 : <input class="w3-input" type="file" name="" id="photo"> <br>
     가격 : <input class="w3-input" type="text" name="" id="price"> <br>

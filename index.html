@@ -44,10 +44,17 @@
                 document.getElementById("btn").className="";
             }
         }
+
+        function popup(){
+           // window.open("팝업소스파일","별명","스타일설정")
+            window.open("index_ev.html","11월 특별 event","width=400, height=400, scrollbars=yes");
+        }
+
     </script>
 
 </head>
-<body class="w3-content w3-margin-top">
+
+<body class="w3-content w3-margin-top" onload="popup()">
 
 <header class="w3-red">
     <p class="w3-xxlarge w3-center">Everyday Care</span>
@@ -83,7 +90,7 @@
                 </ul>
             </li>
             <li class="w3-bar-item w3-button" id="top">
-            <a href="#" class="w3-padding-large">홍보영상</a>
+            <a href="#" class="w3-padding-large" onclick="popup()">특별 이벤트</a>
             </li>
         </ul>
     </navi>
@@ -160,8 +167,13 @@
 
 <!-- section2 end-->
 
+<section id = "video" style="margin-top: 40px;">
+    <p class="w3-center w3-xlarge" style="font-weight: 600;">홍보영상</h2><br><br>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/97BNfjpB1e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
 <section id = "section_3">
-<p class="w3-center w3-xlarge" style="font-weight: 800;">신상품</p>
+<p class="w3-center w3-xlarge" style="font-weight: 800; background-color: #fff0f0; line-height: 60px;">신상품</p>
 <div class = w3-row>
     <div class="w3-col s4">
         <img src="img/c_1.jpg" width="100%">
@@ -216,6 +228,9 @@
 <div id = "btn">
     <a href="#">TOP</a>
 </div>
+
+<!-- btn end-->
+
 
 </body>
 </html>
