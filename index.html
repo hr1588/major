@@ -50,6 +50,10 @@
             window.open("index_ev.html","11월 특별 event","width=400, height=400, scrollbars=yes");
         }
 
+        function register(){
+            window.open("register.html","회원가입","width=400,heigth=400,scrollbars=yes")
+        }
+
     </script>
 
 </head>
@@ -90,7 +94,7 @@
                 </ul>
             </li>
             <li class="w3-bar-item w3-button" id="top">
-            <a href="#" class="w3-padding-large" onclick="popup()">특별 이벤트</a>
+            <a href="location.html" target="_blank" class="w3-padding-large">주변 매장 조회</a>
             </li>
         </ul>
     </navi>
@@ -111,7 +115,7 @@
         <div class="w3-row">
 
         <div class="w3-col s5" style="margin-right: 60px;">
-            <img class = "w3-margin" src="./img/b_1.jpg" width="100%"/>
+            <img class = "w3-margin" src="./img/b_1.jpg" width="100%" onmouseover="mover(this);" onmouseout="mout(this);" />
             <p class="w3-large"style="font-weight: 700;">쑥이 가미된 천연 트리트먼트</p>
             <P>쑥 향기로 머리에 주는 보약</P>
             
@@ -148,7 +152,7 @@
             ID : <br><br><input type="text" name="name" id = "id" class="w3-input"> <br>
             비밀번호 : <br><br><input type="password" name="pass" id="pw" class="w3-input"> <br><br>
             <button class = "w3-btn" onclick="login()">로그인</button> <button class = "w3-btn" onclick="cancel()">취소</button> 
-            <a href="https://join-on.amorepacific.com/member/step1.do?siteCd=APM&returnUrl=https://www.amoremall.com/kr/ko/main?&amp;utm_source=naver&amp;utm_medium=sa&amp;utm_campaign=ao_naver_powerlink&amp;utm_content=amoremall_brand&amp;utm_term=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_media=27758&amp;n_query=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_rank=1&amp;n_ad_group=grp-a001-01-000000022983008&amp;n_ad=nad-a001-01-000000149598090&amp;n_keyword_id=nkw-a001-01-000003934291895&amp;n_keyword=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD&amp;n_campaign_type=1&amp;n_ad_group_type=1&amp;NaPm=ct%3Dkvkx7fls%7Cci%3D0Aa0003mO8bvvMpw7uZn%7Ctr%3Dsa%7Chk%3D88e54e365da47c0d2bcb566b212bc1720f27d948&cid=712931025.1636028635&gid=1925810126.1636028635&pageTitle=%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85&menuId=&subMenuId=&breadCrumb=HOME+%3E+%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85" target="_blank"><button class = "w3-btn">회원가입</button></a>
+            <button class = "w3-btn" onclick="register()">회원가입</button>
         </div>
         
         <div id = "ad" style="margin: 70px 0;">
