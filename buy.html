@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+          #cart,#list{
+            display: flex;
+        }
+
+        #img1,#img2,#img3,#img4{
+            flex:4;
+            width: 25%;
+        }
+
+        img{
+            margin-left: 70px;
+        }
+
+        p{
+            margin-left: 50px;
+        }
+
+        button{
+            margin-left: 50px;
+        }
+
+        #main{
+            position: fixed;
+            top:25px;
+            right: 230px;}
+    </style>
+
+    <script>
+
+        function cartAppend(e){
+            const x = document.getElementById(e);
+            const ele = document.getElementById("cart");
+            ele.appendChild(x);
+        }
+
+        function cartRemove(e){
+            const x = document.getElementById(e);
+            const cart = document.getElementById("cart");
+            const list = document.getElementById("list");
+            cart.removeChild(x);
+            list.appendChild(x);
+        }
+
+
+    </script>
+</head>
+<body>
+    <header class="w3-red">
+        <p class="w3-xxlarge w3-center">Everyday Care</span>
+    </header>
+    
+    <!-- header end-->
+    
+    <nav>
+        <navi>
+            <ul class = "w3-bar">
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">Everyday Care</a>
+                    <ul id="sub">
+                        <li>브랜드 역사</li>
+                        <li>대표 소개</li>
+                        
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">제품</a>
+                    <ul id="sub">
+                        <li>특가 상품</li>
+                        <li>프리미엄 상품</li>
+                        <li>Best 상품</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">커뮤니티</a>
+                    <ul id="sub">
+                        <li>공지 사항</li>
+                        <li>FAQ</li>
+                        <li>1:1 문의</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                <a href="location.html" target="_blank" class="w3-padding-large">주변 매장 조회</a>
+                </li>
+            </ul>
+        </navi>
+    </nav>
+    
+    <h2 style="text-align:center; margin-top: 70px;"> 장바구니 </h2>
+    <div id="cart" style="width: 980px; height: 210px; border: 1px solid gray;">
+    </div><br>
+    <h2 style="text-align:center;"> 상품리스트 </h2>
+<div id="list" style="width: 980px; height: 210px; border: 1px solid gray;">
+    <div id="img1">
+        <img src="img/b_1.jpg" width="110px" height="100">
+        <div>
+          <p>가격:23,900원 <br>품명:천연 트리트먼트</p><br>
+          <button onclick="cartAppend('img1');">추가</button>
+          <button onclick="cartRemove('img1');">삭제</button>
+        </div>
+    </div>
+    <div id="img2">
+        <img src="img/b_2.jpg" width="110px" height="100">
+        <div>
+          <p>가격:24,900원<br> 품명:천연 샴푸</p><br>
+          <button onclick="cartAppend('img2');">추가</button>
+          <button onclick="cartRemove('img2');">삭제</button>
+        </div>
+    </div>
+    <div id="img3">
+        <img src="img/b_3.jpg" width="110px" height="100">
+        <div>
+        <p>가격:15,000원 <br>품명:핸드크림</p><br>
+          <button onclick="cartAppend('img3');">추가</button>
+          <button onclick="cartRemove('img3');">삭제</button>
+        </div>
+    </div>
+        <div id="img4">
+            <img src="img/b_4.jpg" width="110px" height="100">
+            <div>
+              <p>가격:8,900원 <br>품명:립스틱</p><br>
+              <button onclick="cartAppend('img4');">추가</button>
+              <button onclick="cartRemove('img4');">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" id="main">메인으로</a>
+</body>
+</html>

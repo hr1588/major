@@ -4,6 +4,7 @@
 	<meta charset="utf-8"/>
 	<title>Everyday Everywhere !</title>
     <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
     <style>
 
         h1{text-align: center;
@@ -15,11 +16,10 @@
 
         h3{text-align: center;}
 
-        a{
-        text-decoration: none;
-        position: absolute;
-        top:50px;
-        right: 600px;}
+        #main{
+            position: fixed;
+            top:25px;
+            right: 130px;}
     </style>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a7664640a8ae211b58b70e278b0dd2d"></script>
     <script>
@@ -70,10 +70,49 @@
 </head>
 <body onload="getGeolocation();">
 
-    <h1>Everyday Care</h1>
-	<div id="map" style="width:800px;height:600px;"></div>
-    <h3>주변의 매장을 찾아보세요 !</h3>
-    <a href="index.html">메인으로</a>
+    <header class="w3-red">
+        <p class="w3-xxlarge w3-center">Everyday Care</span>
+    </header>
+    
+    <!-- header end-->
+    
+    <nav>
+        <navi>
+            <ul class = "w3-bar">
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">Everyday Care</a>
+                    <ul id="sub">
+                        <li>브랜드 역사</li>
+                        <li>대표 소개</li>
+                        
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">제품</a>
+                    <ul id="sub">
+                        <li>특가 상품</li>
+                        <li>프리미엄 상품</li>
+                        <li>Best 상품</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">커뮤니티</a>
+                    <ul id="sub">
+                        <li>공지 사항</li>
+                        <li>FAQ</li>
+                        <li>1:1 문의</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                <a href="location.html" target="_blank" class="w3-padding-large">주변 매장 조회</a>
+                </li>
+            </ul>
+        </navi>
+    </nav>
+
+    <h3 style="margin-top: 50px;">주변의 매장을 찾아보세요 !</h3>
+	<div id="map" style="width:800px;height:600px; margin-top: 50px;"></div>
+    <a href="index.html" id = "main">메인으로</a>
 
 </body>
 </html>
