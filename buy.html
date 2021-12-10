@@ -53,6 +53,15 @@
             list.appendChild(x);
         }
 
+        window.onscroll = function(){scroll()};
+
+    function scroll(){
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop >100){
+        document.getElementById("btn").className = "top";
+    }else{
+        document.getElementById("btn").className="";
+    }
+}
 
     </script>
 </head>
@@ -166,8 +175,6 @@
     
     </footer>
 
-    <div id = "btn">
-        <a href="#">TOP</a>
-    </div>
+   
 </body>
 </html>
