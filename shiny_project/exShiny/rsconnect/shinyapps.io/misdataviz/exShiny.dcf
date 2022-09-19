@@ -1,0 +1,13 @@
+name: exShiny
+title: exShiny
+username:
+account: misdataviz
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6345993
+bundleId: 5938463
+url: https://misdataviz.shinyapps.io/exShiny/
+when: 1653386547.05854
+lastSyncTime: 1653386547.05854
+asMultiple: FALSE
+asStatic: FALSE

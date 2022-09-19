@@ -1,0 +1,13 @@
+name: shiny
+title: shiny
+username:
+account: misdataviz
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6345761
+bundleId: 5929726
+url: https://misdataviz.shinyapps.io/shiny/
+when: 1653126790.49412
+lastSyncTime: 1653126790.49412
+asMultiple: FALSE
+asStatic: FALSE
