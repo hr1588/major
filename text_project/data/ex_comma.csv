@@ -1,0 +1,6 @@
+name,gender,math,english,korean,attend
+PARK,F,65,80,100,FALSE
+HAN,M,75,60,80,TRUE
+LEE,F,80,100,70,FALSE
+SHIN,M,95,,100,TRUE
+KIM,M,100,80,50,TRUE
