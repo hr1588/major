@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 등록</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    
+    let data = [["샴푸", "img/b_1.jpg", 5000],
+                    ["트리트먼트", "img/b_2.jpg", 10000],
+                    ["핸드크림", "img/b_3.jpg", 10000],
+                    ["립스틱", "img/b_4.jpg", 8000]]
+
+     function tablePrint(){
+        let text = '';
+        text = `<table class="w3-table-all w3-hoverable"><tr class="w3-blue"><th>제품명</th><th>제품</th><th>가격</th></tr>`;
+        for(let i=0; i<data.length; i++){
+            text += `<tr><td>${data[i][0]}</td><td><img src=${data[i][1]}></td><td>${data[i][2]}</td></tr>`;
+        }
+        text += `</table>`;
+        document.getElementById("productList").innerHTML=text;
+        }
+
+        function fileUpload(){
+            let a = new Array();
+            let name = document.getElementById("name").value;
+            let photo = "./img/" +document.getElementById("photo").files[0].name;
+            let price = parseInt(document.getElementById("price").value);
+            a[0] = name;
+            a[1] = photo;
+            a[2] = price;
+
+            data.push(a);
+            console.log(data);
+        }        
+
+        function popup(){
+            window.open("subpro_ev.html","상품 등록 안내","width = 550, height = 300, scrollbars=yes");
+        }
+
+        window.onscroll = function(){scroll()};
+
+    function scroll(){
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop >100){
+        document.getElementById("btn").className = "top";
+    }else{
+        document.getElementById("btn").className="";
+    }
+}
+
+    </script>
+
+    <style>
+
+        a{text-decoration: none;
+        }
+
+        #back{
+            position: fixed;
+            top:25px;
+            right: 30px;
+        }
+
+        #productList{
+            margin-bottom: 60px;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        #information h2{
+            margin-left: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        th{
+            font-size: 25px;
+        }
+
+        tr{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body onload="tablePrint();popup();">
+
+<div id = "information">
+    <h2>상품등록 페이지</h2>
+    <div id = "back">
+        <a href="index.html">메인으로</a>
+    </div>
+</div>
+    
+<div id = "productList"></div>
+
+
+<div class="w3-container" style="margin-bottom: 30px;">
+    <h2 style="font-weight: 600"> 상품 등록</h2><hr>
+    제품명 : <input class="w3-input" type="text" name="" id="name"> <br>
+    제품 : <input class="w3-input" type="file" name="" id="photo"> <br>
+    가격 : <input class="w3-input" type="text" name="" id="price"> <br>
+    <button class= "w3-button w3-blue" onclick="fileUpload();"> 상품등록</button>
+    <button class= "w3-button w3-blue" onclick="tablePrint();"> 상품리스트</button>
+</div>
+
+<div id = "btn">
+    <a href="#">TOP</a>
+</div>
+
+</body>
+</html> 

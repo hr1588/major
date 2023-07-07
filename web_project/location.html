@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Everyday Everywhere !</title>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+
+        h1{text-align: center;
+        margin-bottom: 30px;}
+
+        #map{
+            margin: 0 auto;
+        }
+
+        .find{text-align: center;
+        background-color: yellow;}
+
+        #main{
+            position: fixed;
+            top:25px;
+            right: 130px;}
+    </style>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a7664640a8ae211b58b70e278b0dd2d"></script>
+    <script>
+        function getGeolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showLocation);
+            }
+        }
+
+        function showLocation(location) {
+            let lat = 0.0, long = 0.0;
+            lat =  location.coords.latitude;
+            long = location.coords.longitude;
+
+            var container = document.getElementById('map');
+		    var options = {
+			center: new kakao.maps.LatLng(lat,long),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(lat,long); 
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+        position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        var mapTypeControl = new kakao.maps.MapTypeControl();
+
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+        // 지도 확대 축소를 제어할 수 있는 줌 컨트롤을 생성합니다
+        var zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        }
+
+        window.onscroll = function(){scroll()};
+
+    function scroll(){
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop >100){
+        document.getElementById("btn").className = "top";
+    }else{
+        document.getElementById("btn").className="";
+    }
+}
+    </script>
+</head>
+<body onload="getGeolocation();">
+
+    <header class="w3-red">
+        <p class="w3-xxlarge w3-center">Everyday Care</span>
+    </header>
+    
+    <!-- header end-->
+    
+    <nav>
+        <navi>
+            <ul class = "w3-bar">
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">Everyday Care</a>
+                    <ul id="sub">
+                        <li>브랜드 역사</li>
+                        <li>대표 소개</li>
+                        
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">제품</a>
+                    <ul id="sub">
+                        <li>특가 상품</li>
+                        <li>프리미엄 상품</li>
+                        <li>Best 상품</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                    <a href="#" class="w3-padding-large">커뮤니티</a>
+                    <ul id="sub">
+                        <li>공지 사항</li>
+                        <li>FAQ</li>
+                        <li>1:1 문의</li>
+                    </ul>
+                </li>
+                <li class="w3-bar-item w3-button" id="top">
+                <a href="location.html" target="_blank" class="w3-padding-large">주변 매장 조회</a>
+                </li>
+            </ul>
+        </navi>
+    </nav>
+
+    <h3 style="margin-top: 50px;" class="find">주변의 매장을 찾아보세요 !</h3>
+	<div id="map" style="width:800px;height:600px; margin-top: 50px;"></div>
+    <a href="index.html" id = "main">메인으로</a>
+
+    <footer class = "w3-dark-grey" style="margin-top: 100px;">
+        <div class="w3-row">
+            <div class="w3-col s4 w3-container">
+               <h4 style="font-weight: 700;">에브리데이 케어</h4>
+               <h3>대표자 : 이동현</h3>
+            <p>주소 : 부산광역시 서구 구덕로 225</p>
+           <p>출처 : 동아대학교 경영정보학과</p>
+            </div>
+            <div class="w3-col s4 w3-container">
+                <h4>고객센터</h4>
+                <h3>1588-1568</h3>
+                <p>평일 08:00-20:00
+                (주말 및 공휴일 휴무)</p>
+            </div>
+            <div class="w3-col s4 w3-container">
+            <h4>About cosmetics</h4>
+            <h3>상품 등록</h3>
+            <button class = "w3-button" onclick="Fun()">
+                <a href="sub_product.html">여기를 눌러주세요</a></button>
+            </div>
+        </div>
+    
+        <div class="w3-row" style="margin-top: 20px;">
+            <p class="w3-center">Copyright ⓒ Donghyun Lee All Right Reserved.</p>
+        </div>
+    
+    </footer>
+    
+    <div id = "btn">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>
